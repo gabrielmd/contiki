@@ -26,6 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
+ * @(#)$Id: contiki-sky-main.c,v 1.87 2011/01/09 21:03:42 adamdunkels Exp $
  */
 
 #include <stdio.h>
@@ -49,7 +50,7 @@
 
 #include "net/rime.h"
 
-#include "sys/node-id.h"
+#include "node-id.h"
 #include "cfs-coffee-arch.h"
 #include "cfs/cfs-coffee.h"
 #include "sys/autostart.h"
@@ -272,7 +273,15 @@ main(int argc, char **argv)
     
     cc2420_set_pan_addr(IEEE802154_PANID, shortaddr, longaddr);
   }
-  cc2420_set_channel(RF_CHANNEL);
+
+	// EDITED
+	cc2420_set_channel(RF_CHANNEL);
+
+	if(node_id < 200) { // from 100 to 200
+	  cc2420_set_channel(3);
+	}else { // from 200 to ...
+	  cc2420_set_channel(26);
+	}
 
   printf(CONTIKI_VERSION_STRING " started. ");
   if(node_id > 0) {
