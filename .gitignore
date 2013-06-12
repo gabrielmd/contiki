@@ -37,6 +37,7 @@ doc/html
 patches-*
 tools/tunslip6
 build
+eclipse_build
 tools/coffee-manager/build/
 tools/cooja/dist/
 tools/collect-view/build/
