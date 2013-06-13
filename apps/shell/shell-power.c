@@ -110,6 +110,28 @@ PROCESS_THREAD(shell_power_process, ev, data)
   PROCESS_END();
 }
 /*---------------------------------------------------------------------------*/
+
+void
+printenergy(struct power_msg *msg)
+{
+  char buf[100];
+
+  unsigned long total_power;
+
+  total_power = msg->cpu + msg->lpm + msg->transmit + msg->listen + msg->idle_transmit + msg->idle_listen;
+
+  //snprintf(buf, sizeof(buf), "CPU %lu LPM %lu tx %lu rx %lu idle tx %lu idle rx %lu tot %lu uW",
+  snprintf(buf, sizeof(buf), "%lu, %lu, %lu, %lu, %lu, %lu, %lu",
+     (unsigned long)msg->cpu,
+     (unsigned long)msg->lpm,
+     (unsigned long)msg->transmit,
+     (unsigned long)msg->listen,
+     (unsigned long)msg->idle_transmit,
+     (unsigned long)msg->idle_listen,
+     total_power);
+  shell_output_str(&energy_command, buf, "");
+}
+
 PROCESS_THREAD(shell_energy_process, ev, data)
 {
   struct power_msg msg;
@@ -126,7 +148,8 @@ PROCESS_THREAD(shell_energy_process, ev, data)
   msg.idle_transmit = compower_idle_activity.transmit;
   msg.idle_listen = compower_idle_activity.listen;
 
-  shell_output(&energy_command, &msg, sizeof(msg), "", 0);
+  //shell_output(&energy_command, &msg, sizeof(msg), "", 0);
+  printenergy(&msg);
 
   PROCESS_END();
 }
