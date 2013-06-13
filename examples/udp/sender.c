@@ -51,7 +51,7 @@ PROCESS_THREAD(udphandler_process, ev, data)
     content_id++;
 
     /* sets timer for 2 seconds */
-    etimer_set(&udp_periodic_timer, CLOCK_SECOND * 2);
+    etimer_set(&udp_periodic_timer, CLOCK_SECOND * 1);
 
     /* visual debug */
     leds_invert(LEDS_RED);
@@ -98,6 +98,7 @@ PROCESS_THREAD(udp_process_sender, ev, data)
 	//SENSORS_ACTIVATE(button_sensor);
 
 	serial_shell_init();
+	shell_power_init();
 
 	printf("Process test UDP sender started\n");
 

@@ -1204,7 +1204,7 @@
   <plugin>
     se.sics.cooja.plugins.SimControl
     <width>280</width>
-    <z>4</z>
+    <z>1</z>
     <height>160</height>
     <location_x>400</location_x>
     <location_y>0</location_y>
@@ -1213,6 +1213,8 @@
     se.sics.cooja.plugins.Visualizer
     <plugin_config>
       <skin>se.sics.cooja.plugins.skins.IDVisualizerSkin</skin>
+      <skin>se.sics.cooja.plugins.skins.TrafficVisualizerSkin</skin>
+      <skin>se.sics.cooja.plugins.skins.GridVisualizerSkin</skin>
       <viewport>1.5676767676767676 0.0 0.0 1.5676767676767676 17.636363636363658 35.82828282828284</viewport>
     </plugin_config>
     <width>400</width>
@@ -1227,7 +1229,7 @@
       <filter />
     </plugin_config>
     <width>1267</width>
-    <z>2</z>
+    <z>5</z>
     <height>240</height>
     <location_x>400</location_x>
     <location_y>160</location_y>
@@ -1323,7 +1325,7 @@
       <zoomfactor>500.0</zoomfactor>
     </plugin_config>
     <width>1667</width>
-    <z>1</z>
+    <z>2</z>
     <height>166</height>
     <location_x>0</location_x>
     <location_y>736</location_y>
@@ -1335,10 +1337,60 @@
       <decorations>true</decorations>
     </plugin_config>
     <width>987</width>
-    <z>0</z>
+    <z>4</z>
     <height>160</height>
     <location_x>680</location_x>
     <location_y>0</location_y>
+  </plugin>
+  <plugin>
+    se.sics.cooja.plugins.ScriptRunner
+    <plugin_config>
+      <script>/*&#xD;
+ * Example Contiki test script (JavaScript).&#xD;
+ * A Contiki test script acts on mote output, such as via printf()'s.&#xD;
+ * The script may operate on the following variables:&#xD;
+ *  Mote mote, int id, String msg&#xD;
+ */&#xD;
+&#xD;
+/* Wait until node has booted */&#xD;
+WAIT_UNTIL(id == 81 &amp;&amp; msg.startsWith('Starting'));&#xD;
+log.log("Mote started\n");&#xD;
+&#xD;
+/* Wait 10 seconds (10000ms) */&#xD;
+GENERATE_MSG(10000, "continue");&#xD;
+YIELD_THEN_WAIT_UNTIL(id == 81 &amp;&amp; msg.equals("continue"));&#xD;
+&#xD;
+/* Write command to serial port */&#xD;
+log.log("Writing 'send' to mote serial port\n");&#xD;
+write(mote, "send");&#xD;
+&#xD;
+/* Wait 20 seconds (20000ms) */&#xD;
+GENERATE_MSG(20000, "continue");&#xD;
+YIELD_THEN_WAIT_UNTIL(id == 81 &amp;&amp; msg.equals("continue"));&#xD;
+&#xD;
+/* Write command to serial port */&#xD;
+log.log("Writing 'stop' to mote serial port\n");&#xD;
+write(mote, "stop");&#xD;
+&#xD;
+/* Read reply */&#xD;
+allm = sim.getMotes();&#xD;
+for(var i = 0; i &lt; allm.length; i++){&#xD;
+    YIELD();&#xD;
+    write(allm[i], "energy"); &#xD;
+    YIELD();&#xD;
+    log.log(id + ", " + msg + "\n");&#xD;
+}&#xD;
+&#xD;
+&#xD;
+&#xD;
+log.testOK();</script>
+      <active>false</active>
+    </plugin_config>
+    <width>600</width>
+    <z>0</z>
+    <height>700</height>
+    <location_x>887</location_x>
+    <location_y>40</location_y>
   </plugin>
 </simconf>
 
