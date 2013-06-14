@@ -17,10 +17,12 @@ struct uip_udp_conn *udpconn;
 uip_ipaddr_t ipaddr;
 uint content_id;
 
+uint16_t time_interval;
+
 PROCESS(shell_send_process, "send");
 SHELL_COMMAND(send_command,
 	      "send",
-	      "send: start sending messages",
+	      "send <time>: start sending messages with the time interval in ms",
 	      &shell_send_process);
 
 PROCESS(shell_stop_process, "stop");
@@ -43,15 +45,14 @@ PROCESS_THREAD(udphandler_process, ev, data)
     strcpy(string_buffer, "abc");
     string_buffer[3] = '\0';
 
-
     char string_tmp[60];
     //sprintf(string_tmp, "Sent to: %u.%u.%u.%u - content %s - nr:%u", uip_ipaddr_to_quad(&ipaddr), string_buffer, content_id);
     //shell_output_str(NULL, string_tmp, "");
-    //shell_output_str(NULL, string_tmp, "");
+
     content_id++;
 
     /* sets timer for 2 seconds */
-    etimer_set(&udp_periodic_timer, CLOCK_SECOND * 1);
+    etimer_set(&udp_periodic_timer, CLOCK_SECOND * (time_interval / 1000));
 
     /* visual debug */
     leds_invert(LEDS_RED);
@@ -79,6 +80,10 @@ PROCESS_THREAD(shell_send_process, ev, data)
 
 	PROCESS_BEGIN();
 
+  if(data != NULL) {
+    time_interval = shell_strtolong(data, NULL);
+  }
+
 	process_post(&udphandler_process, ev, data);
 
   PROCESS_END();
@@ -99,6 +104,8 @@ PROCESS_THREAD(udp_process_sender, ev, data)
 
 	serial_shell_init();
 	shell_power_init();
+
+	time_interval = 1000; // 1000ms = 1 second
 
 	printf("Process test UDP sender started\n");
 
