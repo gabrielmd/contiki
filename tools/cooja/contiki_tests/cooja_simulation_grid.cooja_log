@@ -1,0 +1,97 @@
+[15:33:00 - main] [GUI.java:1325] [INFO] - > Starting Cooja
+[15:33:00 - main] [GUI.java:2839] [INFO] - External tools default settings: /external_tools_linux.config
+[15:33:00 - main] [GUI.java:2869] [INFO] - External tools user settings: /home/user/.cooja.user.properties
+[15:33:01 - main] [Simulation.java:423] [INFO] - Simulation random seed: 123456
+[15:33:01 - main] [CompileContiki.java:140] [INFO] - > make receiver.sky TARGET=sky 
+[15:33:01 - main] [CompileContiki.java:140] [INFO] - > make sender.sky TARGET=sky 
+[15:33:02 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/receiver.sky
+[15:33:02 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:02 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:02 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:02 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:02 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:03 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:04 - main] [MspMote.java:216] [INFO] - Loading firmware from: /home/user/contiki/examples/udp/sender.sky
+[15:33:05 - main] [GUI.java:1768] [INFO] - Visualized plugin was not started: class se.sics.cooja.plugins.SimControl
+[15:33:05 - main] [GUI.java:1768] [INFO] - Visualized plugin was not started: class se.sics.cooja.plugins.Visualizer
+[15:33:05 - main] [GUI.java:1768] [INFO] - Visualized plugin was not started: class se.sics.cooja.plugins.LogListener
+[15:33:05 - main] [GUI.java:1768] [INFO] - Visualized plugin was not started: class se.sics.cooja.plugins.TimeLine
+[15:33:05 - main] [GUI.java:1768] [INFO] - Visualized plugin was not started: class se.sics.cooja.plugins.Notes
+[15:33:06 - main] [ScriptRunner.java:421] [INFO] - Test script deactivated
+[15:33:06 - main] [LogScriptEngine.java:261] [INFO] - Default script timeout in 1200000 ms
+[15:33:06 - main] [ScriptRunner.java:378] [INFO] - Test script activated
+[15:33:06 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1371216786606
+[17:25:27 - Thread-2] [LogScriptEngine.java:386] [INFO] - Test script at 5.00%, done in 128086.6 sec

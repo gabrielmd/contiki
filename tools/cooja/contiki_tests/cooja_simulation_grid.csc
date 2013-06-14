@@ -1204,7 +1204,7 @@
   <plugin>
     se.sics.cooja.plugins.SimControl
     <width>280</width>
-    <z>1</z>
+    <z>2</z>
     <height>160</height>
     <location_x>400</location_x>
     <location_y>0</location_y>
@@ -1217,11 +1217,11 @@
       <skin>se.sics.cooja.plugins.skins.GridVisualizerSkin</skin>
       <viewport>1.5676767676767676 0.0 0.0 1.5676767676767676 17.636363636363658 35.82828282828284</viewport>
     </plugin_config>
-    <width>400</width>
-    <z>3</z>
-    <height>400</height>
-    <location_x>1</location_x>
-    <location_y>1</location_y>
+    <width>376</width>
+    <z>0</z>
+    <height>437</height>
+    <location_x>237</location_x>
+    <location_y>189</location_y>
   </plugin>
   <plugin>
     se.sics.cooja.plugins.LogListener
@@ -1325,7 +1325,7 @@
       <zoomfactor>500.0</zoomfactor>
     </plugin_config>
     <width>1667</width>
-    <z>2</z>
+    <z>3</z>
     <height>166</height>
     <location_x>0</location_x>
     <location_y>736</location_y>
@@ -1352,6 +1352,9 @@
  *  Mote mote, int id, String msg&#xD;
  */&#xD;
 &#xD;
+ //import Java Package to JavaScript&#xD;
+ importPackage(java.io);&#xD;
+&#xD;
 /* Wait until node has booted */&#xD;
 WAIT_UNTIL(id == 81 &amp;&amp; msg.startsWith('Starting'));&#xD;
 log.log("Mote started\n");&#xD;
@@ -1364,13 +1367,15 @@ YIELD_THEN_WAIT_UNTIL(id == 81 &amp;&amp; msg.equals("continue"));&#xD;
 log.log("Writing 'send' to mote serial port\n");&#xD;
 write(mote, "send");&#xD;
 &#xD;
-/* Wait 20 seconds (20000ms) */&#xD;
-GENERATE_MSG(20000, "continue");&#xD;
+/* Wait 5 seconds (5000ms) */&#xD;
+GENERATE_MSG(5000, "continue");&#xD;
 YIELD_THEN_WAIT_UNTIL(id == 81 &amp;&amp; msg.equals("continue"));&#xD;
 &#xD;
 /* Write command to serial port */&#xD;
 log.log("Writing 'stop' to mote serial port\n");&#xD;
 write(mote, "stop");&#xD;
+&#xD;
+output = new FileWriter("log_" + id +".txt");&#xD;
 &#xD;
 /* Read reply */&#xD;
 allm = sim.getMotes();&#xD;
@@ -1378,16 +1383,15 @@ for(var i = 0; i &lt; allm.length; i++){&#xD;
     YIELD();&#xD;
     write(allm[i], "energy"); &#xD;
     YIELD();&#xD;
-    log.log(id + ", " + msg + "\n");&#xD;
+      &#xD;
+    output.write(id + ", " + msg + "\n");&#xD;
 }&#xD;
 &#xD;
-&#xD;
-&#xD;
-log.testOK();</script>
+output.close();</script>
       <active>false</active>
     </plugin_config>
     <width>600</width>
-    <z>0</z>
+    <z>1</z>
     <height>700</height>
     <location_x>887</location_x>
     <location_y>40</location_y>
